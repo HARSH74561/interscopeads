@@ -1,0 +1,8 @@
+.card a {
+  text-decoration: none;
+}
+
+.card a h3 {
+  text-decoration: none;
+   /* Ensures it doesn't get the link color */
+}

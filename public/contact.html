@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – Interscope Ads</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> 
+  <script src="script2.js"></script>
+  
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Interscope Ads Logo" />
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="casestudies.html">Case studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section fade-in">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p style="max-width: 600px; margin: 0 auto 0.5rem; text-align: center;">
+  Have a project in mind or want to collaborate? 
+</p>
+<p style="max-width: 600px; margin: 0 auto 1.5rem; text-align: center;">
+  Fill out the form below or reach out directly via email or phone.
+</p>
+
+
+
+    <form class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <select name="user_type" required>
+        <option value="" disabled selected>Select Your Role</option>
+        <option value="advertiser">Advertiser</option>
+        <option value="publisher">Publisher</option>
+      </select>
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="subject" placeholder="Subject" />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button class="btn" type="submit">Send Message</button>
+    </form>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-images">
+        <a href="https://in.linkedin.com/company/interscope-tech-media-private-limited" target="_blank">
+          <img src="assets/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.facebook.com/Interscopetechmedia" target="_blank">
+          <img src="assets/facebook.webp" alt="Facebook" />
+        </a>
+        <a href="https://wa.me/919145145268" target="_blank">
+          <img src="assets/whatsapp.webp" alt="WhatsApp" />
+        </a>
+      </div>
+      <p>Email: <a href="mailto:support@interscopeads.in">support@interscopeads.in</a></p>
+      <p>&copy; 2025 Interscope Ads. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 150); // stagger by 150ms
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

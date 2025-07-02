@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interscope Ads – Digital Marketing Experts</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/expertise.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+  <a href="index.html">
+    <img src="assets/logo.png" alt="Interscope Ads Logo" style="height: 40px;" />
+  </a>
+</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="casestudies.html">Case studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- Expertise Section -->
+<section id="expertise" class="section fade-in" style="margin-bottom: 2rem; margin-top: -1rem;">
+  <div class="container">
+    <h2 style="text-align: center;">Our Expertise</h2>
+    <p style="max-width: 800px; margin: 0 auto 2rem; text-align: center; font-size: 1.1rem;padding-bottom: 2rem;">
+     At Interscope Ads, we specialize in high-performance user acquisition campaigns that drive results across global markets. With deep domain knowledge and cutting-edge technology, we help brands scale efficiently and profitably.
+    </p>
+    
+   <h2 style="text-align: center;">Our Partners</h2>
+    <div class="expertise-grid" >
+  <div class="fade-in"><img src="assets/google.svg" alt="google"></div>
+  <div class="fade-in"><img src="assets/Singular.webp" alt="Singular"></div>
+  <div class="fade-in"><img src="assets/Kochava.webp" alt="Kochava"></div>
+  <div class="fade-in"><img src="assets/Appsflyer.webp" alt="AppsFlyer"></div>
+  <div class="fade-in"><img src="assets/affise.svg" alt="affise"></div>
+  <div class="fade-in"><img src="assets/meta.svg" alt="meta"></div>
+  <div class="fade-in"><img src="assets/adjust.svg" alt="Adjust"></div>
+  <div class="fade-in"><img src="assets/airbridge.svg" alt="Airbridge"></div>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-images" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+        <a href="https://in.linkedin.com/company/interscope-tech-media-private-limited" target="_blank">
+          <img src="assets/linkedin.png" alt="LinkedIn" width="30" height="30" style="border-radius: 10px;" />
+        </a>
+        <a href="https://www.facebook.com/Interscopetechmedia" target="_blank">
+          <img src="assets/facebook.webp" alt="Facebook" width="30" height="30" />
+        </a>
+        <a href="https://wa.me/919145145268" target="_blank">
+          <img src="assets/whatsapp.webp" alt="WhatsApp Us" width="30" height="30" />
+        </a>
+      </div>
+      <p>Email: <a href="mailto:support@interscopeads.in">support@interscopeads.in</a></p>
+      <p>&copy; 2025 Interscope Ads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 150); // stagger by 150ms
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>

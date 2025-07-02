@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interscope Ads – Digital Marketing Experts</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/casestudies.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+<script src="script.js"></script>
+
+  
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+  <a href="index.html">
+    <img src="assets/logo.png" alt="Interscope Ads Logo" style="height: 40px;" />
+  </a>
+</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="casestudies.html">Case studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- Case Studies Section -->
+<section id="case-studies" class="section fade-in">
+  <div class="container">
+    <h2>Case Studies</h2>
+    <div class="cards">
+
+      <div class="card fade-in">
+        <a href="acorns.html">
+          <img src="assets/acorns.png" alt="acorns" style="width: 60%; border-radius: 35px; margin-bottom: 0rem;" />
+          <h3> Acorns</h3>
+        </a>
+        <p>Driving First-Time Recurring Investments at Scale.</p>
+      </div>
+
+      <div class="card fade-in">
+        <a href="careem.html">
+          <img src="assets/careem.png" alt="careem" style="width: 60%; border-radius: 35px; margin-bottom: 0rem;" />
+          <h3>Careem Food</h3>
+        </a>
+        <p>First-Time Orders with Performance Marketing at Scale.</p>
+      </div>
+
+      <div class="card fade-in">
+        <a href="inter.html">
+          <img src="assets/inter.jpg" alt="inter" style="width: 60%; border-radius: 35px; margin-bottom: 0rem;" />
+          <h3>Inter</h3>
+        </a>
+        <p>Driving Verified Account Openings in Brazil with Precision.</p>
+      </div>
+
+      <div class="card fade-in">
+        <a href="si.html">
+          <img src="assets/instamart.png" alt="swiggy instamart" style="width: 60%; border-radius: 35px; margin-bottom: 0rem;" />
+          <h3>Swiggy Instamart</h3>
+        </a>
+        <p>Accelerating First Orders Across Tier-1 & Tier-2 Indian Cities.</p>
+      </div>
+
+      <div class="card fade-in">
+        <a href="bk.html">
+          <img src="assets/burgerking.png" alt="burger king" style="width: 60%; border-radius: 35px; margin-bottom: 0rem;" />
+          <h3>Burger King</h3>
+        </a>
+        <p>Driving Verified Purchase Deliveries Through Compliant, High-Intent Media.</p>
+      </div>
+
+      <div class="card fade-in">
+        <a href="navi.html">
+          <img src="assets/navi.png" alt="Navi" style="width: 60%; border-radius: 35px; margin-bottom: 0rem;" />
+          <h3>Navi</h3>
+        </a>
+        <p>Driving High-Quality Loan Approvals via UPI Journey & Precision Attribution.</p>
+      </div>
+
+      <div class="card fade-in">
+        <a href="nord.html">
+          <img src="assets/nord.jpg" alt="NORD VPN" style="width: 60%; border-radius: 35px; margin-bottom: 0rem;" />
+          <h3>NordVPN</h3>
+        </a>
+        <p>Driving Premium Subscriptions Through Strictly Compliant CPA Campaigns.</p>
+      </div>
+
+      <div class="card fade-in">
+        <a href="noon.html">
+          <img src="assets/noon.jpg" alt="Case Study 8" style="width: 60%; border-radius: 35px; margin-bottom: 0rem;" />
+          <h3>Noon</h3>
+        </a>
+        <p> Powering Verified First-Time Orders in the UAE via High-Intent App Performance.</p>
+      </div>
+      <div class="card fade-in">
+        <a href="ava.html">
+          <img src="assets/ava.jpg" alt="Case Study 8" style="width: 60%; border-radius: 35px; margin-bottom: 0rem;" />
+          <h3>Ava Finance</h3>
+        </a>
+        <p>Converting U.S. Users into Paid Subscribers with High Funnel Efficiency.</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-images">
+  <a href="https://in.linkedin.com/company/interscope-tech-media-private-limited" target="_blank">
+    <img src="assets/linkedin.png" alt="LinkedIn" />
+  </a>
+  <a href="https://www.facebook.com/Interscopetechmedia" target="_blank">
+    <img src="assets/facebook.webp" alt="Facebook" />
+  </a>
+  <a href="https://wa.me/919145145268" target="_blank">
+    <img src="assets/whatsapp.webp" alt="WhatsApp Us" />
+  </a>
+</div>
+    </div>
+    <p>Email: <a href="mailto:support@interscopeads.in">support@interscopeads.in</a></p>
+    <p>&copy; 2025 Interscope Ads. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scroll Animation Script -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const faders = document.querySelectorAll(".fade-in");
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (!entry.isIntersecting) return;
+
+        // Add a staggered delay
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 150); // 150ms delay per item
+
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach((fader, index) => {
+      appearOnScroll.observe(fader);
+    });
+  });
+</script>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
+</body>

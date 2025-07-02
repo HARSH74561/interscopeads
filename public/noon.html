@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noon – Performance Marketing Case Study</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/cases.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Interscope Ads Logo" style="height: 40px;" />
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="casestudies.html">Case studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="section fade-in" style="text-align: center; padding-top: 3rem;">
+    <div class="container">
+      <img src="assets/noon.jpg" alt="Noon Logo" style="width: 120px; border-radius: 30px; margin-bottom: 0.5rem;" />
+      <h1>Noon</h1>
+      <p>Powering Verified First-Time Orders in the UAE via High-Intent App Performance</p>
+    </div>
+  </section>
+
+  <!-- Case Study Content -->
+  <section class="section fade-in">
+    <div class="container">
+      <!-- Top Grid Info -->
+      <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+        <div class="card fade-in"><strong>App:</strong><br> noon: Shopping, Food, Grocery</div>
+        <div class="card fade-in"><strong>Platform:</strong><br> Android & iOS</div>
+        <div class="card fade-in"><strong>Geo:</strong><br> United Arab Emirates</div>
+        <div class="card fade-in"><strong>Model:</strong><br> CPO (Cost Per Order)</div>
+      </div>
+
+      <!-- Campaign, Strategy, Results -->
+      <div class="cards">
+        <div class="card fade-in">
+          <h2>Campaign</h2>
+          <p>
+            The goal was to drive high-quality installs for Noon that converted into first-time and repeat purchase events, validated through Google Analytics and CRM. Fulfilled, non-returned orders were strictly counted as valid conversions.
+          </p>
+        </div>
+
+        <div class="card fade-in" style="text-align: left;">
+          <h2>Strategy</h2>
+          <ul>
+            <li>Used pre-approved, high-performing media sources</li>
+            <li>Localized creatives targeting high-intent UAE users</li>
+            <li>Excluded Grocery & Minutes verticals per brand policy</li>
+            <li>Matched GA session and CRM data for validation</li>
+            <li>Maintained install-to-order visibility with CR thresholds</li>
+          </ul>
+        </div>
+
+        <div class="card fade-in" style="text-align: left;">
+          <h2>Results</h2>
+          <ul>
+            <li><strong>Click-to-Install CR:</strong> 0.37% (Above 0.3% KPI)</li>
+            <li><strong>Install CR (Threshold):</strong> Maintained > 0.06%</li>
+            <li><strong>Conversion Validation:</strong> GA & CRM matched orders</li>
+            <li><strong>Fulfillment Rate:</strong> 92% of purchases delivered</li>
+            <li><strong>Top Creatives:</strong> UAE festival offers, fast delivery & deals</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="fade-in image-wrapper" style="display: flex; justify-content: center; margin-bottom: 2rem;">
+        <img src="assets/noon1.jpg" alt="Noon Visual" style="width: 325px; height: 550px; border-radius: 50px; padding: 1rem;" />
+      </div>
+
+      <!-- Back Button -->
+      <div style="text-align: center; margin-top: auto; padding-bottom: 2rem;">
+        <a href="casestudies.html" class="btn">← Back to All Case Studies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-images">
+        <a href="https://in.linkedin.com/company/interscope-tech-media-private-limited" target="_blank">
+          <img src="assets/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.facebook.com/Interscopetechmedia" target="_blank">
+          <img src="assets/facebook.webp" alt="Facebook" />
+        </a>
+        <a href="https://wa.me/919145145268" target="_blank">
+          <img src="assets/whatsapp.webp" alt="WhatsApp Us" />
+        </a>
+      </div>
+      <p>Email: <a href="mailto:support@interscopeads.in">support@interscopeads.in</a></p>
+      <p>&copy; 2025 Interscope Ads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+          if (!entry.isIntersecting) return;
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, index * 150);
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+
+  <!-- Hamburger Toggle -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

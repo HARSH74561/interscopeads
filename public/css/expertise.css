@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(145deg, #0f0c29, #302b63, #24243e);
+  color: white;
+}
+
+.section {
+  padding: 4rem 1rem;
+}
+
+/* Fade-in animation base */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Expertise Grid Layout */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+
+/* Grid Images */
+.expertise-grid img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.expertise-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+
+@media (max-width: 768px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    gap: 1.5rem;
+  }
+
+  .expertise-grid img {
+    width: 150px;
+  }
+
+  .section {
+    padding: 2.5rem 1rem;
+  }
+}

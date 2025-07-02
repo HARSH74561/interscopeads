@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NordVPN – Performance Marketing Case Study</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/cases.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Interscope Ads Logo" style="height: 40px;" />
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="casestudies.html">Case studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="section fade-in" style="text-align: center; padding-top: 3rem;">
+    <div class="container">
+      <img src="assets/nord.jpg" alt="NordVPN Logo" style="width: 120px; border-radius: 30px; margin-bottom: 0.5rem;" />
+      <h1>NordVPN</h1>
+      <p>Driving Premium Subscriptions Through Strictly Compliant CPA Campaigns</p>
+    </div>
+  </section>
+
+  <!-- Case Study Content -->
+  <section class="section fade-in">
+    <div class="container">
+      <!-- Top Grid Info -->
+      <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+        <div class="card fade-in"><strong>App:</strong><br> NordVPN – Fast & Secure VPN</div>
+        <div class="card fade-in"><strong>Platforms:</strong><br> iOS & Android</div>
+        <div class="card fade-in"><strong>Geo:</strong><br> United States</div>
+        <div class="card fade-in"><strong>Model:</strong><br> CPA – Pay-per-Purchase</div>
+      </div>
+
+      <!-- Campaign, Strategy, Results -->
+      <div class="cards">
+        <div class="card fade-in">
+          <h2>Campaign</h2>
+          <p>
+            The NordVPN campaign aimed to acquire premium paid users in the U.S. through performance-driven channels with strict transparency and brand-compliant practices. Emphasis was placed on yearly plans to increase LTV and subscription value.
+          </p>
+        </div>
+
+        <div class="card fade-in" style="text-align: left;">
+          <h2>Strategy</h2>
+          <ul>
+            <li>Device-specific targeting for iOS and Android to optimize performance</li>
+            <li>Approved placements only for clean traffic and brand-safe environments</li>
+            <li>Audience focus: digital nomads, privacy seekers, remote workers</li>
+            <li>Creative focus on annual savings, privacy, and streaming freedom</li>
+            <li>Source-level transparency with real-time dashboard tracking</li>
+          </ul>
+        </div>
+
+        <div class="card fade-in" style="text-align: left;">
+          <h2>Results</h2>
+          <ul>
+            <li><strong>Click-to-Install CR:</strong> 1.12% (Above target)</li>
+            <li><strong>Install-to-Purchase CR:</strong> 2.05% avg. (Android > iOS)</li>
+            <li><strong>Higher AOV:</strong> via yearly plan conversions</li>
+            <li><strong>Traffic Compliance:</strong> Full source transparency & naming integrity</li>
+            <li><strong>Outcome:</strong> Campaign cleared for scale-up due to quality performance</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="fade-in image-wrapper" style="display: flex; justify-content: center; margin-bottom: 2rem;">
+        <img src="assets/nord1.jpg" alt="NordVPN Visual" style="width: 325px; height: 550px; border-radius: 50px; padding: 1rem;" />
+      </div>
+
+      <!-- Back Button -->
+      <div style="text-align: center; margin-top: auto; padding-bottom: 2rem;">
+        <a href="casestudies.html" class="btn">← Back to All Case Studies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-images">
+        <a href="https://in.linkedin.com/company/interscope-tech-media-private-limited" target="_blank">
+          <img src="assets/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.facebook.com/Interscopetechmedia" target="_blank">
+          <img src="assets/facebook.webp" alt="Facebook" />
+        </a>
+        <a href="https://wa.me/919145145268" target="_blank">
+          <img src="assets/whatsapp.webp" alt="WhatsApp Us" />
+        </a>
+      </div>
+      <p>Email: <a href="mailto:support@interscopeads.in">support@interscopeads.in</a></p>
+      <p>&copy; 2025 Interscope Ads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Animation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+          if (!entry.isIntersecting) return;
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, index * 150);
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+
+  <!-- Hamburger Menu Script -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

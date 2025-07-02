@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careem Food – Performance Marketing Case Study</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/cases.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Interscope Ads Logo" style="height: 40px;" />
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="casestudies.html">Case studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ <!-- Banner -->
+<section class="section fade-in" style="text-align: center; padding-top: 3rem;">
+  <div class="container">
+    <img src="assets/instamart.png" alt="Swiggy Instamart Logo" style="width: 120px; border-radius: 30px; margin-bottom: 0.5rem;" />
+    <h1>Swiggy Instamart</h1>
+    <p>Accelerating First Orders Across Tier-1 & Tier-2 Indian Cities</p>
+  </div>
+</section>
+
+<!-- Case Study Content -->
+<section class="section fade-in">
+  <div class="container">
+    
+    <!-- Top Grid Info -->
+    <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+      <div class="card fade-in"><strong>App:</strong><br> Swiggy Instamart</div>
+      <div class="card fade-in"><strong>Platform:</strong><br> Android & iOS</div>
+      <div class="card fade-in"><strong>Geo:</strong><br> India</div>
+      <div class="card fade-in"><strong>Model:</strong><br> CPFT (Cost per First Transaction)</div>
+    </div>
+
+    <!-- Campaign, Strategy, Results -->
+    <div class="cards">
+      <div class="card fade-in">
+        <h2>Campaign</h2>
+        <p>
+          The Swiggy Instamart campaign aimed to drive high-quality first orders across India's Tier-1 and Tier-2 cities using regional targeting, engaging creatives, and strict attribution compliance.
+        </p>
+      </div>
+
+      <div class="card fade-in" style="text-align: left;">
+        <h2>Strategy</h2>
+        <ul>
+          <li>45-city focused in-app and programmatic placements</li>
+          <li>Targeted Urban Gen-Z, professionals, and impulse buyers</li>
+          <li>Localized banners with discounts and “10-min delivery” visuals</li>
+          <li>Anti-fraud filters to block hijacking/flooding</li>
+        </ul>
+      </div>
+
+      <div class="card fade-in" style="text-align: left;">
+        <h2>Results</h2>
+        <ul>
+          <li><strong>CTR:</strong> 0.6%+ across all placements</li>
+          <li><strong>AOV:</strong> ₹225 average</li>
+          <li><strong>Repeat Orders (M0):</strong> 22%</li>
+          <li><strong>Attribution Rejection Rate:</strong> &lt;1%</li>
+          <li><strong>CRM Reporting:</strong> Fully aligned with backend validations</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Visual Image -->
+    <div class="fade-in image-wrapper" style="display: flex; justify-content: center; margin-bottom: 2rem;">
+      <img src="assets/instamart1.png" alt="Swiggy Instamart Visual" style="width: 550px; height: 350px; border-radius: 50px; padding: 1rem;" />
+    </div>
+
+    <!-- Back Button -->
+    <div style="text-align: center; margin-top: auto; padding-bottom: 2rem;">
+      <a href="casestudies.html" class="btn">← Back to All Case Studies</a>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-images">
+        <a href="https://in.linkedin.com/company/interscope-tech-media-private-limited" target="_blank">
+          <img src="assets/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.facebook.com/Interscopetechmedia" target="_blank">
+          <img src="assets/facebook.webp" alt="Facebook" />
+        </a>
+        <a href="https://wa.me/919145145268" target="_blank">
+          <img src="assets/whatsapp.webp" alt="WhatsApp Us" />
+        </a>
+      </div>
+      <p>Email: <a href="mailto:support@interscopeads.in">support@interscopeads.in</a></p>
+      <p>&copy; 2025 Interscope Ads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+          if (!entry.isIntersecting) return;
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, index * 150);
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach((fader, index) => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+  <script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Burger King – Performance Marketing Case Study</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/cases.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Interscope Ads Logo" style="height: 40px;" />
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="casestudies.html">Case studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section fade-in" style="text-align: center; padding-top: 3rem;">
+    <div class="container">
+      <img src="assets/burgerking.png" alt="Burger King Logo" style="width: 120px; border-radius: 30px; margin-bottom: 0.5rem;" />
+      <h1>Burger King</h1>
+      <p>Driving Verified Purchase Deliveries Through High-Intent Media</p>
+    </div>
+  </section>
+
+  <!-- Main Content Section -->
+  <section class="section fade-in">
+    <div class="container">
+      <!-- Info Grid -->
+      <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+        <div class="card fade-in"><strong>App:</strong><br>Burger King</div>
+        <div class="card fade-in"><strong>Platform:</strong><br> Android & iOS</div>
+        <div class="card fade-in"><strong>Geo:</strong><br> Russia</div>
+        <div class="card fade-in"><strong>Model:</strong><br> CPA – Pay-per-Delivery</div>
+      </div>
+
+      <!-- Campaign Details -->
+      <div class="cards">
+        <div class="card fade-in" >
+          <h2>Campaign</h2>
+          <p>
+            The Burger King campaign focused on acquiring non-incentivized users who complete verified delivery purchases. We implemented strict compliance and fraud monitoring systems while optimizing for performance KPIs like Install-to-Purchase IR and CTIT thresholds.
+          </p>
+        </div>
+
+        <div class="card fade-in" style="text-align: left;">
+          <h2>Strategy</h2>
+          <ul style="padding-left: 0; list-style: none;">
+            <li>Pre-vetted DSPs and in-app placements</li>
+            <li>Advertiser-approved creatives for brand consistency</li>
+            <li>Source-level monitoring with throttling against fraud</li>
+          </ul>
+        </div>
+
+        <div class="card fade-in" style="text-align: left; ">
+          <h2>Results</h2>
+          <ul style="padding-left: 0; list-style: none;">
+            <li><strong>CTIT >60 mins:</strong> 7.5% (Below threshold)</li>
+            <li><strong>Install-to-Purchase IR:</strong> 0.045% (Above goal)</li>
+            <li><strong>Post-Attribution Fraud:</strong> 9.6% (Well within limit)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="fade-in" style="display: flex; justify-content: center; margin: 2rem 0;">
+        <img src="assets/burgerking1.png" alt="Burger King Visual" style="width: 300px; height: 550px; border-radius: 50px; padding: 1rem;" />
+      </div>
+
+      <!-- Back Button -->
+      <div style="text-align: center; padding-bottom: 2rem;">
+        <a href="casestudies.html" class="btn">← Back to All Case Studies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-images">
+        <a href="https://in.linkedin.com/company/interscope-tech-media-private-limited" target="_blank">
+          <img src="assets/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.facebook.com/Interscopetechmedia" target="_blank">
+          <img src="assets/facebook.webp" alt="Facebook" />
+        </a>
+        <a href="https://wa.me/919145145268" target="_blank">
+          <img src="assets/whatsapp.webp" alt="WhatsApp Us" />
+        </a>
+      </div>
+      <p>Email: <a href="mailto:support@interscopeads.in">support@interscopeads.in</a></p>
+      <p>&copy; 2025 Interscope Ads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Animation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+          if (!entry.isIntersecting) return;
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, index * 150);
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach((fader, index) => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+
+  <!-- Hamburger Menu Script -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interscope Ads – Digital Marketing Experts</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/cases.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> 
+<script src="script.js"></script>
+
+  
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+  <a href="index.html">
+    <img src="assets/logo.png" alt="Interscope Ads Logo" style="height: 40px;" />
+  </a>
+</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="casestudies.html">Case studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+   <!-- Banner Section -->
+<section class="section fade-in" style="text-align: center; padding-top: 3rem;">
+  <div class="container">
+    <img src="assets/acorns.png" alt="Acorns Logo" style="width: 120px; border-radius: 30px; margin-bottom: 0rem;" />
+    <h1>Acorns</h1>
+    <p>Driving First-Time Recurring Investments at Scale</p>
+  </div>
+</section>
+
+
+<!-- Case Study Content -->
+<section class="section fade-in">
+  <div class="container">
+
+    <!-- Top Grid: Small Info Cards -->
+    <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+      <div class="card fade-in" style="padding: 1.5rem; text-align: left;"><strong>App:</strong><br>Acorns–Invest For Your Future</div>
+      <div class="card fade-in" style="padding: 1.5rem; text-align: left;"><strong>Platform:</strong><br> iOS</div>
+      <div class="card fade-in" style="padding: 1.5rem; text-align: left;"><strong>Category:</strong><br> Finance</div>
+      <div class="card fade-in" style="padding: 1.5rem; text-align: left;"><strong>Geo:</strong><br> United States</div>
+      <div class="card fade-in" style="padding: 1.5rem; text-align: left;"><strong>Model:</strong><br> Pay-per-FRIRT</div>
+    </div>
+
+   <!-- Combined Cards in One Row -->
+<div class="cards">
+  <div class="card fade-in">
+    <h2>Campaign</h2>
+    <p>
+      The Acorns campaign focused on increasing first-time recurring investments via highly optimized acquisition strategies, advanced targeting, and automation at scale.
+    </p>
+  </div>
+
+  <div class="card fade-in"style="text-align: left;">
+    <h2 style=>Strategy</h2>
+    <ul>
+      <li>Cross-Channel Media Buying</li>
+      <li>Audience Segmentation</li>
+      <li>A/B tested creatives on app stores</li>
+      <li>Creative Automation with 550+ variants</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in"style="text-align: left;">
+    <h2>Results</h2>
+    <ul>
+      <li><strong>CAC:</strong> Under $70</li>
+      <li><strong>Install → RegComp:</strong> 13–15%</li>
+      <li><strong>RegComp → FRIRT:</strong> 72–75%</li>
+      <li><strong>Outcome:</strong> Loyal users with consistent investment patterns</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- Image at the bottom -->
+<div class="fade-in image-wrapper" style="display: flex; justify-content: center; margin-bottom: 2rem;">
+  <img src="assets/acorns1.png" alt="Acorns Visual" style="width: 500px; height: 350px; border-radius: 50px; padding: 1rem;" />
+</div>
+
+    <!-- Back Button -->
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="casestudies.html" class="btn">← Back to All Case Studies</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-images">
+  <a href="https://in.linkedin.com/company/interscope-tech-media-private-limited" target="_blank">
+    <img src="assets/linkedin.png" alt="LinkedIn" />
+  </a>
+  <a href="https://www.facebook.com/Interscopetechmedia" target="_blank">
+    <img src="assets/facebook.webp" alt="Facebook" />
+  </a>
+  <a href="https://wa.me/919145145268" target="_blank">
+    <img src="assets/whatsapp.webp" alt="WhatsApp Us" />
+  </a>
+</div>
+    </div>
+    <p>Email: <a href="mailto:support@interscopeads.in">support@interscopeads.in</a></p>
+    <p>&copy; 2025 Interscope Ads. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<!-- Scroll Animation Script -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const faders = document.querySelectorAll(".fade-in");
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (!entry.isIntersecting) return;
+
+        // Add a staggered delay
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 150); // 150ms delay per item
+
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach((fader, index) => {
+      appearOnScroll.observe(fader);
+    });
+  });
+</script>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+</body>

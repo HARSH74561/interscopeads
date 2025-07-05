@@ -2,6 +2,12 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+// Explicitly serve sitemap.xml with correct Content-Type
+app.get('/sitemap.xml', (req, res) => {
+  res.set('Content-Type', 'application/xml');
+  res.sendFile(path.join(__dirname, 'public', 'sitemap.xml'));
+});
+
 // Serve static files from the "public" folder
 app.use(express.static(path.join(__dirname, 'public')));
 

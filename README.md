@@ -50,10 +50,10 @@ Installation & Setup (“How to Run”)
    ```bash
    npm install
 3.**Environment variables:**
-  Create a .env file with entries like:
-  PORT=3000
-  DATABASE_URL=<your_database_url>
-  API_KEY=<your_api_key>
+     Create a .env file with entries like:
+     PORT=3000
+     DATABASE_URL=<your_database_url>
+     API_KEY=<your_api_key>
 4.**Run the application:**
   ```bash
   npm start
